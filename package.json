@@ -1,0 +1,9 @@
+{
+  "name": "flapybird",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*",
+    "socketio-file-upload": "^0.4.4"
+  }
+}
