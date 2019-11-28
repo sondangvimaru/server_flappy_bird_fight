@@ -225,7 +225,17 @@ socket.on("user-off",function(id)
 });
 socket.on("huy-tran",function(id)
 {
+    for(i=0;i<userArray.length;i++)
+    {
+        if(userArray[i]._id==Number(id))
+        {
 
+          
+           userArray[i].timtran=0
+
+            break;
+        }
+    }
   
 
 });
