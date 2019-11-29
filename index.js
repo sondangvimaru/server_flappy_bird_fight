@@ -40,6 +40,7 @@ for(i=0;i<userArray.length;i++)
        vitri=i;
        
        console.log(userArray[i]._name+":dang tim tran");
+
         break;
    } 
 
@@ -219,6 +220,7 @@ socket.on("user-off",function(id)
     }
 
 });
+//cancel match
 socket.on("huy-tim-tran",function(id)
 {
     for(i=0;i<userArray.length;i++)
