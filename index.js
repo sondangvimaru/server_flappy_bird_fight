@@ -77,11 +77,7 @@ var id_sum=  Number(userArray[vitri]._id)+ Number(userArray[j]._id);
 
 }
 
-// if(dem<2) 
-// {
-//     u1.socket.emit("server-send-room",{room:("0")});
-//     u2.socket.emit("server-send-room",{room:("0")});
-// }
+
 });
 
 
@@ -223,13 +219,14 @@ socket.on("user-off",function(id)
     }
 
 });
-socket.on("huy-tran",function(id)
+socket.on("huy-tim-tran",function(id)
 {
     for(i=0;i<userArray.length;i++)
     {
         if(userArray[i]._id==Number(id))
         {
 
+     
           
            userArray[i].timtran=0
 
