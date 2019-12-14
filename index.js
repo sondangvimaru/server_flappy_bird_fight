@@ -238,6 +238,30 @@ socket.on("huy-tim-tran",function(id)
   
 
 });
+
+socket.on("eat-item",function(eat)
+{
+
+    var arr_eat = eat.split(" ");
+    for(i=0;i<arrfight.length;i++)
+    {
+        if(arrfight[i].room==Number(arr_eat[0]) )
+        {
+            if(arrfight[i].user1._id==Number(arr_eat[1].trim()))
+            {
+                arrfight[i].user2.socket.emit("server-send-rocket",{rocket:true})
+              
+            }
+            else   if(arrfight[i].user2._id==Number(arr_eat[1].trim()))
+            {
+                arrfight[i].user1.socket.emit("server-send-rocket",{rocket:true})
+              
+            }
+
+        }
+    }
+     
+})
 }
 
 );
